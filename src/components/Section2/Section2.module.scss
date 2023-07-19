@@ -1,0 +1,46 @@
+@import '../../Global//Global.module.scss';
+
+@mixin display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    .parent{
+        @include display;
+        height: 100vh;
+        width: 100vw;
+        background-color: $primary-color;
+    }
+    .left_child{
+        height: 100%;
+        width: 50%;
+        border: 2px solid green;
+        // margin-top: 10px;
+        .upper_part{
+            width: 100%;
+            height: 20%;
+        border: 2px solid rgb(19, 100, 167);
+
+        }
+        .lower_part{
+            @include display;
+            height: 100%;
+            .part_1{
+                border: 2px solid blue;
+                height: 60%;
+                width: 50%;
+            }
+            .part_2{
+                border: 2px solid green;
+                height: 60%;
+                width: 50%;
+            }
+        }
+    }
+    .right_child{
+        height: 100%;
+        width: 50%;
+        border: 2px solid pink;
+    }
+}

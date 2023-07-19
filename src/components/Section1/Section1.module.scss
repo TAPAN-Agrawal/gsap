@@ -1,0 +1,117 @@
+@import '../../Global/Global.module.scss';
+
+@mixin display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+position: relative;
+    .nav{
+        position: absolute;
+        z-index: 2;
+    }
+
+.parent{
+    @include display ;
+    height: 100vh;
+    width: 100vw;
+    background-color: $primary-color;
+    position: relative;
+
+ 
+
+    
+
+    .left_part{
+        height: 100vh;
+        width:50%;
+        background-color: $primary-color;
+        
+        .typewritting{
+            @include display;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+            width: 35%;
+            height: 25%;
+            // border: 2px solid black;
+
+            .type1{
+                @include display;
+                position: relative;
+                height: 20%;
+                width: 100%;
+                background-color: $gray;
+                border-radius: 20px;
+                font-family: $font-family;
+                font-weight: 300;
+            }
+            .tick{
+                @include display;
+                position: absolute;
+                height: 30px;
+                width:30px;
+                background-color: $secondary-color;
+                top: 27px;
+                left: 10px;
+                border-radius: 40px;
+            }
+            .type2{
+                
+                color: $tertiary-color;
+                font-size: 30px;
+                font-weight: 500;
+            }
+            .type3{
+                @include display;
+                height: 20%;
+                width: 50%;
+                background-color: $secondary-color;
+                border-radius: 20px;
+                color: $primary-color;
+            }
+        }
+    }
+    .right_part{
+        @include display;
+        height: 100vh;
+        width:50%;
+        background-color: $cream;
+
+        .img1{
+            height: 200px;
+        }
+    }
+    .bounce{
+        @include display;
+        position: absolute;
+        right: -250px;
+        height: 250px;
+        width: 500px;
+        background-color: blue;
+
+        .bounce_1{
+            @include display;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+            height: 100%;
+            width: 50%;
+            background-color: $cream;
+            padding-left: 10px;
+        }
+        .bounce_2{
+            height: 100%;
+            width: 50%;
+            background-color: $primary-color;
+
+            .bounce_img2{
+                height: 250px;
+                width: 250px;
+            }
+        }
+
+
+    }
+}}
